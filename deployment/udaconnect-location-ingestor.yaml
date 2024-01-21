@@ -38,6 +38,8 @@ spec:
         name: location-ingestor
         imagePullPolicy: Always
         env:
+        - name: PYTHONUNBUFFERED
+          value: "0"
         - name: TOPIC_NAME
           valueFrom:
             configMapKeyRef:
