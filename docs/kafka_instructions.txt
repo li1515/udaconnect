@@ -1,0 +1,5 @@
+1) Install helm.
+2) Add bitnami repo:
+	helm repo add bitnami https://charts.bitnami.com/bitnami
+3) Run helm to deploy kafka:
+	helm install udaconnect-kafka bitnami/kafka 
