@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: location-ingestor
+  name: location-ingestor
+spec:
+  ports:
+  - name: "5005"
+    nodePort: 30003
+    port: 5005
+    protocol: TCP
+    targetPort: 5005
+  selector:
+    app: location-ingestor
+  type: NodePort
+  
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: location-ingestor
+  name: location-ingestor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: location-ingestor
+  template:
+    metadata:
+      labels:
+        app: location-ingestor
+    spec:
+      containers:
+      - image: ihnatenkolv/location-ingestor:latest
+        name: location-ingestor
+        imagePullPolicy: Always
+        env:
+        - name: TOPIC_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: kafka-env
+              key: TOPIC_NAME
+        - name: KAFKA_SERVER
+          valueFrom:
+            configMapKeyRef:
+              name: kafka-env
+              key: KAFKA_SERVER
+      restartPolicy: Always

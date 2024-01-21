@@ -6,8 +6,8 @@ import location_pb2
 import location_pb2_grpc
 from kafka import KafkaProducer
 
-TOPIC_NAME = "locations"
-KAFKA_SERVER = "kafka-service:9092"
+TOPIC_NAME = os.environ["TOPIC_NAME"]
+KAFKA_SERVER = os.environ["KAFKA_SERVER"]
 
 producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER)
 
