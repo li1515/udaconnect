@@ -2,7 +2,7 @@ Architecture Decisions
 
 It was decided to choose 3 types of message passing to utilize their advantages for the following use cases:
 
-1. RESTful API: For integrating with Frontend web application. REST is nowadays mostly used industry standard, using Starter project it was simple to integrate.
+1. RESTful API: For integrating with Frontend web application. REST is nowadays mostly used industry standard, the API Exceptions handling was improved.
 
 2. gRPC: For integrating with mobile application to receive device location, because of its overall better performance, payload size reduction and strict typing compared to REST.
 
