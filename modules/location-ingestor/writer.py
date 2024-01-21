@@ -13,8 +13,8 @@ stub = location_pb2_grpc.LocationServiceStub((channel))
 #Creating locations
 location_1 = location_pb2.LocationMessage(
     person_id=1,
-    latitude=-48.113704,
-    longitude=-11.637020
+    latitude=48.113704,
+    longitude=11.637020
 )
 
 
