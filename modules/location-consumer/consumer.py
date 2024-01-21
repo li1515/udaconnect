@@ -16,8 +16,10 @@ DB_NAME = os.environ["DB_NAME"]
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("udaconnect-consumer-saver")
 
-TOPIC_NAME = 'location'
-messages = KafkaConsumer(TOPIC_NAME, bootstrap_servers=['kafka-service:9092'])
+TOPIC_NAME = os.environ["TOPIC_NAME"]
+KAFKA_SERVER = os.environ["KAFKA_SERVER"]
+
+messages = KafkaConsumer(TOPIC_NAME, bootstrap_servers=[KAFKA_SERVER])
 
 
 def add_to_location(location):

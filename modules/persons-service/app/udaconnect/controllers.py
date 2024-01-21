@@ -17,7 +17,7 @@ DATE_FORMAT = "%Y-%m-%d"
 api = Namespace("UdaConnect", description="Connections via geolocation.")  # noqa
 
 
-@app.errorhandler(HTTPException) 
+@api.errorhandler(HTTPException) 
 def handle_error(error):
     response = jsonify(error.to_dict())
     response.status_code = error.status_code
