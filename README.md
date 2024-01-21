@@ -88,7 +88,7 @@ Manually applying each of the individual `yaml` files is cumbersome but going th
 Note: The first time you run this project, you will need to seed the database with dummy data. Use the command `sh scripts/run_db_command.sh <POD_NAME>` against the `postgres` pod. (`kubectl get pods` will give you the `POD_NAME`). Subsequent runs of `kubectl apply` for making changes to deployments or services shouldn't require you to seed the database again!
 
 ### Verifying it Works
-Once the project is up and running, you should be able to see 8 pods and 8 services in Kubernetes:
+Once the project is up and running, you should be able to see 6 pods and 8 services in Kubernetes:
 `kubectl get pods` and `kubectl get services` - should both return `location-consumer`, `location-ingestor`, `persons-service`, `postgres` and `frontend`
 
 

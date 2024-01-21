@@ -5,7 +5,7 @@ import location_pb2
 import location_pb2_grpc
 
 
-print("Sending sample locations...")
+print("Sending sample location...")
 
 channel = grpc.insecure_channel("localhost:5005")
 stub = location_pb2_grpc.LocationServiceStub(channel)
