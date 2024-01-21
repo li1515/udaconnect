@@ -35,5 +35,4 @@ jobs:
           file: ./modules/persons-service/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ihnatenkolv/persons-service:latest
