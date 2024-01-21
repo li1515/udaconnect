@@ -8,8 +8,9 @@ spec:
   ports:
   - name: "5000"
     port: 5000
+    protocol: TCP
     targetPort: 5000
-    nodePort: 30001
+    nodePort: 30002
   selector:
     service: persons-service
   type: NodePort
@@ -31,7 +32,7 @@ spec:
         service: persons-service
     spec:
       containers:
-      - image: ihnatenkolv/persons-service:main
+      - image: ihnatenkolv/persons-service:latest
         name: persons-service
         imagePullPolicy: Always
         env:
