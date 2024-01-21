@@ -14,7 +14,7 @@ DB_NAME = os.environ["DB_NAME"]
 
 # Configure logging level to INFO 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger("udaconnect-consumer-saver")
+logger = logging.getLogger("location-consumer")
 
 TOPIC_NAME = os.environ["TOPIC_NAME"]
 KAFKA_SERVER = os.environ["KAFKA_SERVER"]
