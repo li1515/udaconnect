@@ -1,5 +1,4 @@
 from marshmallow import Schema, fields
-from marshmallow_sqlalchemy.convert import ModelConverter as BaseModelConverter
 
 
 class LocationSchema(Schema):

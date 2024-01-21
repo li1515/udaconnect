@@ -1,10 +1,11 @@
 import time, json
-from concurrent import futures
-
+import os
 import grpc
 import location_pb2
 import location_pb2_grpc
+
 from kafka import KafkaProducer
+from concurrent import futures
 
 TOPIC_NAME = os.environ["TOPIC_NAME"]
 KAFKA_SERVER = os.environ["KAFKA_SERVER"]
