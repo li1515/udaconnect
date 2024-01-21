@@ -8,5 +8,5 @@ RUN pip install -r requirements.txt
 
 EXPOSE 5000
 
-COPY . .
+COPY ./modules/location-ingestor/ .
 CMD ["python", "grpc_server.py"]
