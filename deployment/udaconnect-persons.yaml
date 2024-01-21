@@ -10,7 +10,7 @@ spec:
     port: 5000
     protocol: TCP
     targetPort: 5000
-    nodePort: 30002
+    nodePort: 30001
   selector:
     service: persons-service
   type: NodePort
