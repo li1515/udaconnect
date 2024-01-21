@@ -116,3 +116,13 @@ class PersonService:
     @staticmethod
     def retrieve_all() -> List[Person]:
         return db.session.query(Person).all()
+        
+    @staticmethod
+    def delete(person_id: int):
+        response = {}
+        person = db.session.query(Person).get(person_id)
+        response['id'] = person.id
+        db.session.delete(person)
+        db.session.commit()
+
+        return 'Done', 201

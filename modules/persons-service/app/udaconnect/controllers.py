@@ -56,6 +56,8 @@ class PersonResource(Resource):
     def get(self, person_id) -> Person:
         person: Person = PersonService.retrieve(person_id)
         return person
+        
+@api.route("/persons/<person_id>", methods=['DELETE'])
 
 
 @api.route("/persons/<person_id>/connection")
