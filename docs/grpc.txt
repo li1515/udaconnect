@@ -24,7 +24,7 @@ One can use writer.py in the microservice to illustrate sending location data to
 
 To test, run these:
 
-kubectl exec -it $LOCATION_INGESTOR_POD sh
+kubectl exec -it $LOCATION_INGESTOR_POD -- sh
 
 
 The above command is to enter the location-ingestor pod. You can also use Lens to enter Pod Shell.

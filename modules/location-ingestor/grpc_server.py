@@ -10,7 +10,7 @@ from concurrent import futures
 TOPIC_NAME = os.environ["TOPIC_NAME"]
 KAFKA_SERVER = os.environ["KAFKA_SERVER"]
 
-producer = KafkaProducer(bootstrap_servers=KAFKA_SERVER)
+producer = KafkaProducer(bootstrap_servers=[KAFKA_SERVER])
 
 
 class LocationServicer(location_pb2_grpc.LocationServiceServicer):
