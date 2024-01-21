@@ -54,3 +54,8 @@ def add_to_location(location):
                 cursor.execute(query)
             except Exception as e:
                 logger.error("Unable to save location data to the database. reason: {1}".format(e))
+                
+while True:
+    for message in messages:
+        location_data = message.value.decode('utf-8')
+        add_to_location(location_data)

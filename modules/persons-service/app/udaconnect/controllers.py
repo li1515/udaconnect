@@ -1,5 +1,5 @@
 from datetime import datetime
-
+from urllib.error import HTTPError
 from app.udaconnect.models import Connection, Location, Person
 from app.udaconnect.schemas import (
     ConnectionSchema,
