@@ -120,6 +120,9 @@ class PersonService:
     @staticmethod
     def delete(person_id: int):
         response = {}
+        db.session.query(Location).filter(
+            Location.person_id == person_id
+        ).delete()
         person = db.session.query(Person).get(person_id)
         response['id'] = person.id
         db.session.delete(person)

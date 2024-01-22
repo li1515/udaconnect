@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "fd035b87-0eb2-4dab-b065-07f2551f3d25",
+		"_postman_id": "daed4070-b941-435e-90f9-dc8546a380dc",
 		"name": "UdaConnect Connections API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "2799522"
@@ -235,6 +235,62 @@
 									]
 								},
 								{
+									"name": "delete person resource",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/persons/:person_id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"persons",
+												":person_id"
+											],
+											"variable": [
+												{
+													"key": "person_id",
+													"value": "<string>",
+													"description": "(Required) Unique ID for a given Person"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/persons/:person_id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"persons",
+														":person_id"
+													],
+													"variable": [
+														{
+															"key": "person_id"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
 									"name": "get person resource",
 									"request": {
 										"method": "GET",
@@ -293,9 +349,9 @@
 							]
 						},
 						{
-							"name": "get persons resource",
+							"name": "post persons resource",
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
 								"url": {
 									"raw": "{{baseUrl}}/api/persons",
@@ -312,7 +368,7 @@
 								{
 									"name": "Success",
 									"originalRequest": {
-										"method": "GET",
+										"method": "POST",
 										"header": [],
 										"url": {
 											"raw": "{{baseUrl}}/api/persons",
@@ -335,9 +391,9 @@
 							]
 						},
 						{
-							"name": "post persons resource",
+							"name": "get persons resource",
 							"request": {
-								"method": "POST",
+								"method": "GET",
 								"header": [],
 								"url": {
 									"raw": "{{baseUrl}}/api/persons",
@@ -354,7 +410,7 @@
 								{
 									"name": "Success",
 									"originalRequest": {
-										"method": "POST",
+										"method": "GET",
 										"header": [],
 										"url": {
 											"raw": "{{baseUrl}}/api/persons",

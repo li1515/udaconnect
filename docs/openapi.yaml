@@ -30,18 +30,18 @@ paths:
       tags:
       - UdaConnect
   "/api/persons":
-    get:
-      responses:
-        '200':
-          description: Success
-      operationId: get_persons_resource
-      tags:
-      - UdaConnect
     post:
       responses:
         '200':
           description: Success
       operationId: post_persons_resource
+      tags:
+      - UdaConnect
+    get:
+      responses:
+        '200':
+          description: Success
+      operationId: get_persons_resource
       tags:
       - UdaConnect
   "/api/persons/{person_id}":
@@ -51,6 +51,13 @@ paths:
       name: person_id
       required: true
       type: string
+    delete:
+      responses:
+        '200':
+          description: Success
+      operationId: delete_person_resource
+      tags:
+      - UdaConnect
     get:
       responses:
         '200':
