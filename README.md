@@ -92,13 +92,12 @@ Note: The first time you run this project, you will need to seed the database wi
 First apply `kubectl apply -f deployment/kafka/zookeeper.yaml`, then update kafka.yaml with zookeeper internal ip, and then `kubectl apply -f deployment/kafka/kafka.yaml`.
 
 ### Verifying it Works
-Once the project is up and running, you should be able to see 6 pods and 8 services in Kubernetes:
-`kubectl get pods` and `kubectl get services` - should both return `location-consumer`, `location-ingestor`, `persons-service`, `postgres` and `frontend`
+Once the project is up and running, you should be able to see 7 pods and 8 services in Kubernetes:
+`kubectl get pods` and `kubectl get services` - should both return `location-consumer`, `location-ingestor`, `persons-service`, `postgres`, `frontend` and Kafka related.
 
 
 These pages should also load on your web browser:
 * `http://localhost:30001/` - OpenAPI Documentation
-* `http://localhost:30001/api/` - Base path for API
 * `http://localhost:30000/` - Frontend ReactJS Application
 
 ## Development
